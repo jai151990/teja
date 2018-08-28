@@ -11,7 +11,7 @@ pipeline {
                   }
              stage ('copyscript'){
                   steps {
-                       sh('deployenv.sh')
+                       sh('deployenv.sh')}
                 }
              }  
 }
