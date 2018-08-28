@@ -11,7 +11,7 @@ pipeline {
                   }
              stage ('definescript'){
                   steps {
-                       sh 'file.sh'}
+                       sh 'cp target/student.war /home/siva/soft/apache-tomcat-8.5.32/webapps'}
                   }
                }
          }
