@@ -1,6 +1,6 @@
 #!/bin/bash
 ENV=$1
-if [ $ENV = "DEV" ]; then
+if [ $ENV = "QA" ]; then
   for i in `cat ip.txt`
       do 
         echo "deploy war file $i:"
