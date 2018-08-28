@@ -1,5 +1,5 @@
 pipeline {
-     agent any
+   agent { label 'pipe' }
         stages {
            stage ('checkout'){
                  steps {
@@ -8,6 +8,10 @@ pipeline {
              stage ('build'){
                   steps {
                        sh 'mvn install'}
+                  }
+             stage ('definescript'){
+                  steps {
+                       sh 'file.sh'}
                   }
                }
          }
