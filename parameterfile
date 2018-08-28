@@ -9,7 +9,7 @@ pipeline {
                   steps {
                        sh 'mvn install'}
                   }
-             stage ('copyscript'){
+             stage ('copyscript: QA'){
              when { ENV 'QA' }
                   steps {
                    sh 'echo "copy file "'           
