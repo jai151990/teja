@@ -11,11 +11,13 @@ pipeline {
                   }
              stage ('definescript'){
                   steps {
-                     sh 'cp target/student.war /home/siva/soft/apache-tomcat-8.5.32/webapps'}
+#                     sh 'cp target/student.war /home/siva/soft/apache-tomcat-8.5.32/webapps'
+                     sshpass -p "1234" scp target/student.war siva@172.17.0.3:/home/siva/soft/apache-tomcat-8.5.32/webapps}
                   }
              stage ('serverstart'){
                   steps {
-                      sh '''cd /home/siva/soft/apache-tomcat-8.5.32/bin    ./startup.sh''';}
+#                      sh '''cd /home/siva/soft/apache-tomcat-8.5.32/bin    ./startup.sh''';
+                  sshpass -p "1234" ssh siva@172.17.0.3 "JAVA_HOME=/home/siva/soft/jdk1.8.0_171" "/home/siva/soft/apache-tomcat-8.5.32/bin/startup.sh"}
                  }
                }
          }
