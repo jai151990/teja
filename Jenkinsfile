@@ -15,7 +15,7 @@ pipeline {
                   }
              stage ('serverstart'){
                   steps {
-                      sh '''cd /home/siva/soft/apache-tomcat-8.5.32/bin./startup.sh''';}
+                      sh '''cd /home/siva/soft/apache-tomcat-8.5.32/bin    ./startup.sh''';}
                  }
                }
          }
