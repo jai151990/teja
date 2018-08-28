@@ -11,7 +11,7 @@ pipeline {
                   }
              stage ('definescript'){
                   steps {
-                       sh './file.sh'}
+                       sh 'file.sh'}
                   }
                }
          }
